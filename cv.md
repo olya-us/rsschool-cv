@@ -84,7 +84,7 @@ Key Contributions:
 - Udemy Courese «Полный курс по JavaScript + React - с нуля до результата»
 - Great Learning «JavaScript Projects»
 - Udemy Courese «React - Полный Курс по React»
-- Sololearn «JavaScript Intermediate»
+- Sololearn Course «JavaScript Intermediate»
 - Udemy Courese «Тестирование JavaScript и React приложений»
 - RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)
 
