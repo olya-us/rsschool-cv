@@ -23,14 +23,14 @@ body {
 .wrapper {
     background-color: #fefefe;
     width: 100%;
-    max-width: 1330px;
+    max-width: 1240px;
     margin: 20px auto;
     padding: 40px;
     border-radius: 10px;
 }
 
 section {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 h1,h2,h3 {
@@ -53,16 +53,20 @@ ul{
 .left .photo img {
     width: 250px;
     border-radius: 100%;
+    border: 1px solid #dae2e8;
+    margin-bottom: 20px;
 }
 
 main {
     display: flex;
+    gap: 40px;
     margin: 40px 0;
 }
 
 .left {
     max-width: 300px;
     width: 100%;
+    margin-top: 20px;
     ul {
         padding: 0;
         li{
@@ -72,10 +76,13 @@ main {
 }
 
 .menu {
+    padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 30px;
+    row-gap: 5px;
     width: 100%;
     a{
         font-size: 16px;
