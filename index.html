@@ -1,184 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <div class="inner">
-        <header>
-            <nav>
-                <ul class="menu">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Key Skills</a></li>
-                    <li><a href="#code">Code example</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#languages">Languages</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-          <div class="left">
-            <div class="info">
-                <div class="photo">
-                    <img src="img/avatar.jpeg" alt="Olya Us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+        <div class="inner">
+            <header>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Key Skills</a></li>
+                        <li><a href="#code">Code example</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+            <div class="left">
+                <div class="info">
+                    <div class="photo">
+                        <img src="img/avatar.jpeg" alt="Olya Us">
+                    </div>
+                    <div class="name"><h2>Olya Us</h2></div>
+                    <div class="profession"><h3>Frontend Developer</h3></div>
+                    <ul>
+                        <li>
+                            E-mail:
+                            <a href="mailto:olyaus0809@gmail.com">olyaus0809@gmail.com</a>
+                        </li>
+                        <li>
+                            Telegram:
+                            <a href="https://t.me/us_olya" target="_blank">@us_olya</a>
+                        </li>
+                        <li>Discord: olya_08434</li>
+                        <li>
+                            <a href="https://olyaus.netlify.app" target="_blank">Portfolio</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="name"><h2>Olya Us</h2></div>
-                <div class="profession"><h3>Frontend Developer</h3></div>
-                <ul>
-                    <li>
-                        E-mail:
-                        <a href="mailto:olyaus0809@gmail.com">olyaus0809@gmail.com</a>
-                    </li>
-                    <li>
-                        Telegram:
-                        <a href="https://t.me/us_olya" target="_blank">@us_olya</a>
-                    </li>
-                    <li>Discord: olya_08434</li>
-                    <li>
-                        <a href="https://olyaus.netlify.app" target="_blank">Portfolio</a>
-                    </li>
-                </ul>
             </div>
-          </div>
-          <div class="content">
-            <section id="about">
-                <h2>About</h2>
-                <p>I specialize in crafting dynamic and responsive web applications using modern frontend technologies.</p>
-                <p>I’m proficient in using in using JavaScript/TypeScript and React to create dynamic and interactive websites. Additionally, I am skilled in setting up build and development processes using tools such as npm, Vite, Jest, and Git, which helps me to efficiently manage and track my code.</p>
-                <p>To ensure high-quality code, I use tools like ESLint and Stylelint to improve the code’s readability, maintainability, and consistency. I am also a responsible team player who works well with others and constantly seeks to learn and improve my skills.</p>
-            </section>
-            <section id="skills">
-                <h2>Key Skills</h2>
-                <ul>
-                    <li>React / React-Query</li>
-                    <li>Javascript / Typescript</li>
-                    <li>CSS / SCSS</li>
-                    <li>Git / GitHub</li>
-                    <li>Vite / Webpack / Gulp</li>
-                    <li>Jest / Testing Library</li>
-                </ul>
-            </section>
-            <section id="code">
-                <h2>Code example</h2>
-                <p>This code defines a LanguageSwitcher component in React that allows users to switch between Russian and English languages, using the react-i18next library for translation and localStorage to persist the selected language.</p>
-                <pre>
-                <code>
-                import { useState, useEffect } from 'react';
-                import { useTranslation } from 'react-i18next';
-                import TabNavigation from './Tabs'; 
-                
-                const LanguageSwitcher = () => {
-                    const { i18n } = useTranslation();
-                    const [activeLang, setActiveLang] = useState('ru');
-                
-                    useEffect(() => {
-                        const storedLang = localStorage.getItem('lng') || 'ru';
-                        setActiveLang(storedLang);
-                        i18n.changeLanguage(storedLang);
-                    }, [i18n]);
-                
-                    const changeLanguage = (lng) => {
-                        i18n.changeLanguage(lng);
-                        localStorage.setItem('lng', lng);
-                        setActiveLang(lng);
-                    };
-                
-                    const tabs = [
-                        { id: 0, label: 'Ru', onClick: () => changeLanguage('ru') },
-                        { id: 1, label: 'En', onClick: () => changeLanguage('en') },
-                    ];
-                
-                    return <TabNavigation tabs={tabs} activeTab={activeLang === 'ru' ? 0 : 1} />;
-                };
-                
-                export default LanguageSwitcher;
-                </code>
-                </pre>
-            </section>
-            <section id="experience">
-                <h2>Work Experience</h2>
-                <p>Work as Frontend Developer in ust.inc (August 2019 – present).</p>
-                <p>Transforming complex robotics systems into user-friendly experiences is my specialty. At UST, I leverage cutting-edge technologies like React, JavaScript, and CSS/SCSS to create powerful and intuitive interfaces that make controlling and interacting with robots seamless and efficient.</p>
-                <p>Key Contributions:</p>
-                <ul>
-                    <li>Creation and improvement of Pixel Perfect HTML prototypes, which I with the front-end team turn into working components.</li>
-                    <li>All CSS styles of the system go through visual regression testing to avoid problems with the visual part in production.</li>
-                    <li>Constant code review and discussion of technical aspects with other developers to create the perfect product.</li>
-                    <li>Deliver engaging user experience through optimization of images, code, and cross-browser compatibility, which reduced page load times by up to 30%.</li>
-                    <li>Implemented websites, mobile applications, and landing pages from concept through deployment.</li>
-                    <li>Translated design team’s UX wireframes and mockups into responsive, interactive features, using HTML/CSS, JavaScript, React.js.</li>
-                    <li>Expand features, refine code, and improve processes, producing smoother operations and enhancing user engagement.</li>
-                    <li>Created, maintained, and enforced front-end code and documentation standards.</li>
-                </ul>
-            </section>
-            <section id="courses">
-                <h2>Courses</h2>
-                <ul>
-                    <li>
-                        <a target="_blank" href="https://udemy-certificate.s3.amazonaws.com/image/UC-56989761-7045-4563-8aa2-3e2c8c237b90.jpg">
-                            Udemy Courese «Полный курс по JavaScript + React - с нуля до результата»
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/2951660/original/Olya_Us20230719-68-nvk1pb.jpg">
-                            Great Learning «JavaScript Projects»
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-d95e5d5a-78c6-4ee3-871c-0656d1905447.pdf">
-                            Udemy Courese «React - Полный Курс по React»
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.sololearn.com/en/certificates/CC-HUEYBZMP">
-                            Sololearn Course «JavaScript Intermediate»
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-6014abb2-792a-4aa3-a390-fe7185b3c2ac.pdf">
-                            Udemy Courese «Тестирование JavaScript и React приложений»
-                        </a>
-                    </li>
-                    <li>RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)</li>
-                </ul>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>
-                        <a href="https://ukfh.by/" target="_blank">UKFH</a>
-                    </li>
-                    <li>
-                        <a href="https://gti.holdings/" target="_blank">GTI</a>
-                    </li>
-                    <li>
-                        <a href="https://konkurs.ust.inc/" target="_blank">Konkurs</a>
-                    </li>
-                </ul>
-            </section>
-            <section id="education">
-                <h2>Education</h2>
-                <p>Belarus State Economic University - Marketing Department</p>
-            </section>
-            <section id="languages">
-                <h2>Languages</h2>
-                <ul>
-                    <li>English - Intermediate</li>
-                    <li>Russian - Native</li>
-                </ul>
-            </section>
-          </div>
-        </main>
-      </div>
-    </div>
-  </body>
+            <div class="content">
+                <section id="about">
+                    <h2>About</h2>
+                    <p>I specialize in crafting dynamic and responsive web applications using modern frontend technologies.</p>
+                    <p>I’m proficient in using in using JavaScript/TypeScript and React to create dynamic and interactive websites. Additionally, I am skilled in setting up build and development processes using tools such as npm, Vite, Jest, and Git, which helps me to efficiently manage and track my code.</p>
+                    <p>To ensure high-quality code, I use tools like ESLint and Stylelint to improve the code’s readability, maintainability, and consistency. I am also a responsible team player who works well with others and constantly seeks to learn and improve my skills.</p>
+                </section>
+                <section id="skills">
+                    <h2>Key Skills</h2>
+                    <ul>
+                        <li>React / React-Query</li>
+                        <li>Javascript / Typescript</li>
+                        <li>CSS / SCSS</li>
+                        <li>Git / GitHub</li>
+                        <li>Vite / Webpack / Gulp</li>
+                        <li>Jest / Testing Library</li>
+                    </ul>
+                </section>
+                <section id="code">
+                    <h2>Code example</h2>
+                    <p>This code is handling the acceptance of cookies on a website.</p>
+                    <pre><code>
+let cookieAcceptBtn = document.getElementById('cookieAccept');
+
+if(cookieAcceptBtn) {
+    cookieAcceptBtn.addEventListener('click', function() {
+        saveCookies();
+    })
+}
+
+function saveCookies() {
+    let currentDate = new Date();
+    let expirationDate = currentDate;
+    expirationDate.setMonth(currentDate.getMonth() + 6);
+    document.cookie = "cookieConsentAccepted=1; expires=" + expirationDate.toUTCString() + "; path=/";
+
+    hideModalCookies();
+}
+
+function hideModalCookies() {
+    let modalCookie = document.querySelector('.modal-cookies');
+    modalCookie.style.display = 'none';
+}
+                    </code></pre>
+                </section>
+                <section id="experience">
+                    <h2>Work Experience</h2>
+                    <p>Work as Frontend Developer in ust.inc (August 2019 – present).</p>
+                    <p>Transforming complex robotics systems into user-friendly experiences is my specialty. At UST, I leverage cutting-edge technologies like React, JavaScript, and CSS/SCSS to create powerful and intuitive interfaces that make controlling and interacting with robots seamless and efficient.</p>
+                    <p>Key Contributions:</p>
+                    <ul>
+                        <li>Creation and improvement of Pixel Perfect HTML prototypes, which I with the front-end team turn into working components.</li>
+                        <li>All CSS styles of the system go through visual regression testing to avoid problems with the visual part in production.</li>
+                        <li>Constant code review and discussion of technical aspects with other developers to create the perfect product.</li>
+                        <li>Deliver engaging user experience through optimization of images, code, and cross-browser compatibility, which reduced page load times by up to 30%.</li>
+                        <li>Implemented websites, mobile applications, and landing pages from concept through deployment.</li>
+                        <li>Translated design team’s UX wireframes and mockups into responsive, interactive features, using HTML/CSS, JavaScript, React.js.</li>
+                        <li>Expand features, refine code, and improve processes, producing smoother operations and enhancing user engagement.</li>
+                        <li>Created, maintained, and enforced front-end code and documentation standards.</li>
+                    </ul>
+                </section>
+                <section id="courses">
+                    <h2>Courses</h2>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://udemy-certificate.s3.amazonaws.com/image/UC-56989761-7045-4563-8aa2-3e2c8c237b90.jpg">
+                                Udemy Courese «Полный курс по JavaScript + React - с нуля до результата»
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/2951660/original/Olya_Us20230719-68-nvk1pb.jpg">
+                                Great Learning «JavaScript Projects»
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-d95e5d5a-78c6-4ee3-871c-0656d1905447.pdf">
+                                Udemy Courese «React - Полный Курс по React»
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.sololearn.com/en/certificates/CC-HUEYBZMP">
+                                Sololearn Course «JavaScript Intermediate»
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-6014abb2-792a-4aa3-a390-fe7185b3c2ac.pdf">
+                                Udemy Courese «Тестирование JavaScript и React приложений»
+                            </a>
+                        </li>
+                        <li>RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)</li>
+                    </ul>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li>
+                            <a href="https://ukfh.by/" target="_blank">UKFH</a>
+                        </li>
+                        <li>
+                            <a href="https://gti.holdings/" target="_blank">GTI</a>
+                        </li>
+                        <li>
+                            <a href="https://konkurs.ust.inc/" target="_blank">Konkurs</a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="education">
+                    <h2>Education</h2>
+                    <p>Belarus State Economic University - Marketing Department</p>
+                </section>
+                <section id="languages">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English - Intermediate</li>
+                        <li>Russian - Native</li>
+                    </ul>
+                </section>
+            </div>
+            </main>
+        </div>
+        </div>
+    </body>
 </html>
